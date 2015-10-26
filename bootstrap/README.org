@@ -1,0 +1,19 @@
+# -*- mode: org -*-
+#+STARTUP: showall
+
+* docker-archlinux/bootstrap
+
+Arch Linux dockerfile based on [[https://www.archlinux.org/download/][=archlinux-bootstrap-$DATE-$ARCH.tar.gz=]].
+
+** Build
+
+#+BEGIN_SRC sh
+bash ./prepare_files.sh
+docker build -t archlinux:bootstrap .
+#+END_SRC
+
+** Run
+
+#+BEGIN_SRC sh
+docker run -it archlinux:bootstrap /bin/bash
+#+END_SRC
